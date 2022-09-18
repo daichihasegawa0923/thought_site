@@ -8,5 +8,11 @@
 </head>
 <body>
 <p>Hello World!</p>
+
+<form method="POST" action="http://localhost:8080/user">
+<input type="text" name="name" />
+<input type="password" name="password" />
+<input type="submit" value="submit" />
+</form>
 </body>
 </html>
