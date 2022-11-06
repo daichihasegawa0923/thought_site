@@ -7,7 +7,8 @@ export const tokens = {
     },
     fontColor: {
         nomal: '#666',
-        red: '#A44'
+        red: '#A44',
+        white: '#fff'
     },
     space: {
         nomal: '16px',
@@ -23,6 +24,10 @@ export const tokens = {
     },
     bgColor: {
         positive: '#44E',
-        negative: '#E44'
+        negative: '#E44',
+        disabled: '#ccc',
+    },
+    round:{
+        nomal: '8px',
     }
 };
