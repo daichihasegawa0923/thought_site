@@ -5,7 +5,7 @@
     <session-factory name="user">
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.password">root</property>
-        <property name="hibernate.connection.url">jdbc:mysql://&lt;host&gt;&lt;:port&gt;/&lt;database&gt;</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/user</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.default_schema">user</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
