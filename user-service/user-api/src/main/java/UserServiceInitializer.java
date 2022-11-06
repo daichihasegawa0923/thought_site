@@ -14,10 +14,10 @@ public class UserServiceInitializer extends AbstractHandler{
 
 	public static void main(String[] args) throws Exception {
 		
-		Server server = new Server(8080);
+		Server server = new Server(4000);
 		
 		ServletHandler servletHandler = new ServletHandler();
-		servletHandler.addServletWithMapping((Class<? extends Servlet>) UserServlet.class, "/user");
+		servletHandler.addServletWithMapping(UserServlet.class, "/user");
 		
 		server.setHandler(servletHandler);
 		

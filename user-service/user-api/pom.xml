@@ -4,6 +4,7 @@
   <artifactId>user-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  
   <dependencies>
     <dependency>
         <groupId>org.eclipse.jetty</groupId>
@@ -30,12 +31,6 @@
         <artifactId>hibernate-core</artifactId>
         <version>6.1.5.Final</version>
     </dependency>
-      <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>javax.servlet-api</artifactId>
-        <version>3.1.0</version>
-        <scope>provided</scope>
-    </dependency>
   </dependencies>
   <build>
       <plugins>
@@ -44,7 +39,7 @@
             <artifactId>maven-war-plugin</artifactId>
             <version>3.3.1</version>
         </plugin>
-    </plugins>
+    </plugins>  
     <finalName>check</finalName>
   </build>
 </project>
