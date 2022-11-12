@@ -2,13 +2,8 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
   <hibernate-mapping>
-  <class name="com.techscore.hibernate.Book" table="BOOK" lazy="false">
-
-    <id name="isbn" type="string" unsaved-value="null" >
-      <column name="ISBN" sql-type="char(17)" not-null="true"/>
-      <generator class="assigned"/>
-      </id>
-    <property name="name" />
-    <property name="price" />
+  <class name="domain.User">
+  	<id name="id" column="id" type="string" />
+  	<property name="name" type="string" not-null="true" />
   </class>
 </hibernate-mapping>

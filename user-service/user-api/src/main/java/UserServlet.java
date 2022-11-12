@@ -5,10 +5,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
+import domain.User;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import services.UserService;
 
 public class UserServlet extends HttpServlet {
 
@@ -17,6 +19,10 @@ public class UserServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
+			User user = new User();
+			user.setName("aaaaa");
+			user.setId();
+			UserService.save(user);
 	        resp.setContentType("text/html; charset=utf-8");
 			PrintWriter out = resp.getWriter();
 	 		out.println("<HTML>");
