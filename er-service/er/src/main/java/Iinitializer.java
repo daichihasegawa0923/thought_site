@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 
 import org.eclipse.jetty.server.Request;
@@ -9,15 +10,16 @@ import jakarta.servlet.Servlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import services.ErServlet;
 
-public class UserServiceInitializer extends AbstractHandler{
-
+public class Iinitializer extends AbstractHandler{
 	public static void main(String[] args) throws Exception {
 		
 		Server server = new Server(4000);
 		
 		ServletHandler servletHandler = new ServletHandler();
-		servletHandler.addServletWithMapping(UserServlet.class, "/user");
+
+		servletHandler.addServletWithMapping(ErServlet.class, "/er");
 		
 		server.setHandler(servletHandler);
 		
@@ -35,5 +37,4 @@ public class UserServiceInitializer extends AbstractHandler{
 			HttpServletResponse response) throws IOException, ServletException{
 	
 	}
-
 }
