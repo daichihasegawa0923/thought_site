@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+  <hibernate-mapping>
+  <class name="domain.User">
+  	<id name="id" column="id" type="string" />
+  	<property name="userName" column="name" type="string" />
+  	<property name="mailAddress" column="mailAddress" type="string" />
+  	<property name="isPublic" column="isPublic" type="boolean" />
+  </class>
+  <class name="domain.Relation">
+  	<id name="id" column="id" type="string" />
+  	<property name="relation" column="relation" type="string" />
+  	<many-to-one name="user" class="domain.User">
+  	  <column name="userId" not-null="true"/>
+  	</many-to-one>
+  	<many-to-one name="otherUser" class="domain.User">
+  	  <column name="otherUserId" not-null="true"/>
+  	</many-to-one>
+  </class>
+</hibernate-mapping>

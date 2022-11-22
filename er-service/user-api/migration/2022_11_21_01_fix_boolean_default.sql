@@ -1,0 +1,4 @@
+ALTER TABLE `user`.`User` 
+CHANGE COLUMN `isPublic` `isPublic` TINYINT NOT NULL DEFAULT 0 ;
+CHANGE COLUMN `name` `name` VARCHAR(100) NOT NULL ,
+CHANGE COLUMN `mailAddress` `mailAddress` VARCHAR(200) NOT NULL ;
