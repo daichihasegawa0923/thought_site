@@ -16,4 +16,13 @@ public class JsonParser {
 			return null;
 		}
 	}
+	
+	public static <T extends Object> String toJson(T obj) {
+		try {
+			return new ObjectMapper().writeValueAsString(obj);
+		}catch (Exception e) {
+			Logger.outputLog("toJson", e.getMessage());
+			return null;
+		}
+	}
 }

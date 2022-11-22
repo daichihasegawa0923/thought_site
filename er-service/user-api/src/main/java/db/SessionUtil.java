@@ -31,7 +31,7 @@ public class SessionUtil {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			System.out.println(e.toString());
-			transaction.rollback();
+			if (transaction != null) transaction.rollback();
 			throw e;
 		} finally {
 			if (session != null) session.close();

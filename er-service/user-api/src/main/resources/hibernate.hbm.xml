@@ -7,6 +7,7 @@
   	<property name="userName" column="name" type="string" />
   	<property name="mailAddress" column="mailAddress" type="string" />
   	<property name="isPublic" column="isPublic" type="boolean" />
+  	<one-to-one name="auth" class="domain.Auth" />
   </class>
   <class name="domain.Relation">
   	<id name="id" column="id" type="string" />
@@ -17,5 +18,16 @@
   	<many-to-one name="otherUser" class="domain.User">
   	  <column name="otherUserId" not-null="true"/>
   	</many-to-one>
+  </class>
+    <class name="domain.Auth">
+  	<id name="userId" column="userId">
+  		 <generator class="foreign">
+  		 	<param name="property">user</param>
+  		 </generator>
+  	</id>
+  	<property name="password" column="password" type="string" />
+  	<property name="token" column="token" type="string" />
+  	<property name="lastLoginAt" column="lastLoginAt" type="timestamp" />
+    <one-to-one name="user" class="domain.User"/>
   </class>
 </hibernate-mapping>
