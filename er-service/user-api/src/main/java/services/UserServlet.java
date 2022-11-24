@@ -1,13 +1,9 @@
 package services;
 
-import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 import org.hibernate.Session;
 
 import db.SessionUtil;
@@ -32,25 +28,6 @@ public class UserServlet extends HttpServlet {
     public UserServlet() {
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		try {
-		 Session session = SessionUtil.getSession();
-		 List<User> users = session.createSelectionQuery("FROM User", User.class).list();
-		 for(User user : users){
-			 // JSON変換時の循環参照防止用
-			 user.setAuth(null);
-		 }
-		 Logger.outputLog("doGet-users", users.toString());
-		 response.getWriter().write(JsonParser.toJson(users));
-		}catch(Exception e){
-			Logger.outputLog("doGet", e.getMessage());
-			throw new ServletException();
-		}
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

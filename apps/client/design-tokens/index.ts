@@ -24,7 +24,7 @@ export const tokens = {
         wide: '32px',
     },
     bgColor: {
-        positive: '#44E',
+        positive: '#ffefd5',
         negative: '#E44',
         disabled: '#333',
         nomal: '#ccc',

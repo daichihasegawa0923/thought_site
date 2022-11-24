@@ -7,7 +7,17 @@
   	<property name="userName" column="name" type="string" />
   	<property name="mailAddress" column="mailAddress" type="string" />
   	<property name="isPublic" column="isPublic" type="boolean" />
+  	<property name="role" column="role" type="string" />
   	<one-to-one name="auth" class="domain.Auth" />
+  	<list name="messages">
+  	  <key>
+  	    <column name="userId"/>
+  	  </key>
+  	  <index>
+  	    <column name="id" />
+  	  </index>
+  	  <one-to-many class="domain.Message" />
+  	</list>
   </class>
   <class name="domain.Relation">
   	<id name="id" column="id" type="string" />
@@ -19,7 +29,7 @@
   	  <column name="otherUserId" not-null="true"/>
   	</many-to-one>
   </class>
-    <class name="domain.Auth">
+  <class name="domain.Auth">
   	<id name="userId" column="userId">
   		 <generator class="foreign">
   		 	<param name="property">user</param>
@@ -29,5 +39,17 @@
   	<property name="token" column="token" type="string" />
   	<property name="lastLoginAt" column="lastLoginAt" type="timestamp" />
     <one-to-one name="user" class="domain.User"/>
+  </class>
+  
+  <class name="domain.Message">
+  	<id name="id" column="id" type="string" />
+  	<property name="content" column="content" type="string" />
+  	<property name="likeCount" column="likeCount" type="int" />
+  	<many-to-one name="user" class="domain.User">
+  	  <column name="userId" />
+  	</many-to-one>
+  	<many-to-one name="to" class="domain.Message">
+  	  <column name="to" />
+  	</many-to-one>
   </class>
 </hibernate-mapping>

@@ -10,6 +10,9 @@ import jakarta.servlet.Servlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import services.UserAllServlet;
+import services.AuthWithTokenServlet;
+import services.LoginServlet;
 import services.UserServlet;
 
 public class Iinitializer extends AbstractHandler{
@@ -20,6 +23,9 @@ public class Iinitializer extends AbstractHandler{
 		ServletHandler servletHandler = new ServletHandler();
 
 		servletHandler.addServletWithMapping(UserServlet.class, "/user");
+		servletHandler.addServletWithMapping(UserAllServlet.class, "/allUser");
+		servletHandler.addServletWithMapping(LoginServlet.class, "/login");
+		servletHandler.addServletWithMapping(AuthWithTokenServlet.class, "/auth");
 		
 		server.setHandler(servletHandler);
 		

@@ -1,12 +1,8 @@
 import { BlogTitleCard } from 'components/cards/blog-title-card';
 import { NextPage, GetServerSideProps } from 'next';
+import { withAuth } from 'util/withAuth';
 
-interface IndexProps{
-  // FIXME: お試しで入れているだけなので、後で消す。
-  query: string;
-}
-
-const Index: NextPage<IndexProps> = (props) => {
+const Index: NextPage = () => {
   return (
     <>
     <BlogTitleCard url='#' title='Blog始めました！' summary='こんにちは。'/>
@@ -17,9 +13,9 @@ const Index: NextPage<IndexProps> = (props) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps =  async (context) => {
-  return {props:{query: context.query}};
-};
+export const getServerSideProps: GetServerSideProps =  withAuth(async (_ctx) => {
+  return {props:{}};
+});
 
 
 

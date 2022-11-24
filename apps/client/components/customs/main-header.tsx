@@ -1,5 +1,6 @@
 import { Box, Center } from '@chakra-ui/react'
 import { tokens } from 'design-tokens'
+import Image from 'next/image';
 
 export const MainHeader: React.FC = () => {
     return(
@@ -12,7 +13,7 @@ export const MainHeader: React.FC = () => {
         color={tokens.fontColor.white}
         >
             <Center height={'100%'} width={'100%'}>
-            Foody
+             <Image src='/foody.png' alt='foody' width={512} height={256}/>
             </Center>
         </Box>
     )
