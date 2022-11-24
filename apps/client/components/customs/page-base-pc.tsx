@@ -7,7 +7,7 @@ import { SideMenu } from './side-menu';
 export const PageBasePC: React.FC<{children?: ReactNode}> = (props) => {
     return(
     <>
-    <Container maxWidth={'100%'}>
+    <Container maxWidth={'100%'} height={'100%'} bgColor={tokens.bgColor.positive}>
       <MainHeader />
       <Box padding={tokens.padding.nomal}>
         <HStack>
