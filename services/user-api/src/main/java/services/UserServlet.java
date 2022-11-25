@@ -9,13 +9,13 @@ import org.hibernate.Session;
 import domain.Auth;
 import domain.User;
 import foody.db.SessionUtil;
+import foody.log.Logger;
 import foody.util.PostParamGetter;
 import input.UserInput;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import log.Logger;
 
 /**
  * Servlet implementation class ErServlet

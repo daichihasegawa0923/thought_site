@@ -7,12 +7,12 @@ import org.hibernate.Session;
 
 import domain.User;
 import foody.db.SessionUtil;
+import foody.log.Logger;
 import foody.util.JsonParser;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import log.Logger;
 
 /**
  * Servlet implementation class ErServlet
