@@ -1,8 +1,8 @@
-package services;
+package foody.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import log.Logger;
+import foody.log.Logger;
 
 public class JsonParser {
 	public static <T extends Object> T fromJson(String json, Class<T> tClass) {

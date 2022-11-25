@@ -6,23 +6,19 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
 
-import jakarta.servlet.Servlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import services.UserAllServlet;
-import services.AuthWithTokenServlet;
-import services.LoginServlet;
-import services.UserServlet;
+import services.PostServlet;
 
-public class Iinitializer extends AbstractHandler{
+public class Initializer extends AbstractHandler{
 	public static void main(String[] args) throws Exception {
 		
 		Server server = new Server(4001);
 		
 		ServletHandler servletHandler = new ServletHandler();
 
-		// servletHandler.addServletWithMapping(UserServlet.class, "/user");
+		servletHandler.addServletWithMapping(PostServlet.class, "/post");
 		
 		server.setHandler(servletHandler);
 		

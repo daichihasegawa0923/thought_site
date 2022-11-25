@@ -7,7 +7,6 @@ public class User extends IId{
 	private String mailAddress = null;
 	private boolean isPublic = true;
 	private Auth auth = null;
-	private List<Message> messages = null;
 	
 	private String role = null;
 
@@ -40,11 +39,5 @@ public class User extends IId{
 	}
 	public void setRole(String role) {
 		this.role = role;
-	}
-	public List<Message> getMessages() {
-		return messages;
-	}
-	public void setMessages(List<Message> messages) {
-		this.messages = messages;
 	}
 }

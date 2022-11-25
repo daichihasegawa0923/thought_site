@@ -1,4 +1,4 @@
-package db;
+package foody.db;
 
 import java.util.function.Consumer;
 

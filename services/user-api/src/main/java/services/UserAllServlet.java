@@ -5,8 +5,9 @@ import java.util.List;
 
 import org.hibernate.Session;
 
-import db.SessionUtil;
 import domain.User;
+import foody.db.SessionUtil;
+import foody.util.JsonParser;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -52,7 +53,6 @@ public class UserAllServlet extends HttpServlet {
 			 for(User user : users){
 				 // JSON変換時の循環参照防止用
 				 user.setAuth(null);
-				 user.setMessages(null);
 			 }
 			 response.getWriter().write(JsonParser.toJson(users));
 			}catch(Exception e){

@@ -1,11 +1,11 @@
-package services;
+package foody.util;
 
 import java.io.BufferedReader;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import jakarta.servlet.http.HttpServletRequest;
-import log.Logger;
+import foody.log.Logger;
 
 public class PostParamGetter {
 	public static String getPostRequestParamStr(HttpServletRequest request) {

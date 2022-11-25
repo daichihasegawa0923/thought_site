@@ -6,9 +6,10 @@ import java.util.List;
 import java.util.function.Consumer;
 import org.hibernate.Session;
 
-import db.SessionUtil;
 import domain.Auth;
 import domain.User;
+import foody.db.SessionUtil;
+import foody.util.PostParamGetter;
 import input.UserInput;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;

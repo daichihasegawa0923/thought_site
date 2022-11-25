@@ -4,8 +4,9 @@ import java.io.IOException;
 
 import org.hibernate.Session;
 
-import db.SessionUtil;
 import domain.Auth;
+import foody.db.SessionUtil;
+import foody.util.PostParamGetter;
 import input.AuthWithTokenInput;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;

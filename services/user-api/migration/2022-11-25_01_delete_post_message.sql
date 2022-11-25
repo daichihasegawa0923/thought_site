@@ -1,0 +1,1 @@
+DROP TABLE `user`.`Message`, `user`.`Post`;

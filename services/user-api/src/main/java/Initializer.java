@@ -15,7 +15,7 @@ import services.AuthWithTokenServlet;
 import services.LoginServlet;
 import services.UserServlet;
 
-public class Iinitializer extends AbstractHandler{
+public class Initializer extends AbstractHandler{
 	public static void main(String[] args) throws Exception {
 		
 		Server server = new Server(4000);
