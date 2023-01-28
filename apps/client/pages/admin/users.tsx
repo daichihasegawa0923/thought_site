@@ -45,8 +45,8 @@ const Users: NextPage = () => {
                     公開ユーザーか
                 </Th>
             </Tr>
-            {users.map((user)=>{return (
-             <Tr>
+            {users.map((user, index)=>{return (
+             <Tr key={`${index}_user_info`}>
                <Td>{user.userName}</Td>
                <Td>{user.mailAddress}</Td>
                <Td>{user.isPublic}</Td>
