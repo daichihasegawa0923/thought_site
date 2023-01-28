@@ -2,4 +2,5 @@ FROM node:16
 COPY ./client ./
 WORKDIR /client
 RUN npm run build
-RUN npm start
+EXPOSE 3000
+CMD ["npm", "start"]
